@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Video, Camera, Music, MessageSquare, Briefcase, Code } from "lucide-react";
 import NewsletterForm from "./NewsletterForm";
 
@@ -172,11 +173,11 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-neutral-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-neutral-500 text-sm">
+          <div className="grid items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
+            <p className="text-center text-sm text-neutral-500 md:text-left">
               &copy; {currentYear} Alex Morgan. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center justify-center gap-6">
               <Link
                 href="/privacy"
                 className="text-neutral-500 hover:text-white text-sm transition-colors"
@@ -190,6 +191,24 @@ export default function Footer() {
                 Terms of Service
               </Link>
             </div>
+            <a
+              href="https://shei-it.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 md:justify-end"
+              aria-label="SHEI IT"
+            >
+              <Image
+                src="/Shei%20IT%20Logo.png"
+                alt="SHEI IT"
+                width={24}
+                height={24}
+                className="h-5 w-auto"
+              />
+              <span className="text-sm font-semibold text-neutral-400 transition-colors hover:text-white">
+                SHEI IT
+              </span>
+            </a>
           </div>
         </div>
       </div>
