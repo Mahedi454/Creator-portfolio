@@ -72,10 +72,15 @@ function CreatorStory() {
   );
 }
 
+const CARD_LEFT = "lg:order-1 lg:pr-24 lg:text-right";
+const CARD_LEFT_SPACER = "lg:order-2 lg:pl-24";
+const CARD_RIGHT = "lg:order-2 lg:pl-24 lg:text-left";
+const CARD_RIGHT_SPACER = "lg:order-1 lg:pr-24";
+
 function JourneyTimeline() {
   return (
     <section className="bg-neutral-50 py-24 dark:bg-neutral-900 sm:py-32">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <FadeIn>
           <SectionHeading
             title="The Journey"
@@ -83,8 +88,8 @@ function JourneyTimeline() {
           />
         </FadeIn>
 
-        <div className="relative mt-4">
-          <div className="absolute left-7 top-0 bottom-0 w-px bg-neutral-200 dark:bg-neutral-700 lg:left-1/2 lg:-translate-x-px" />
+        <div className="relative mt-16">
+          <div className="absolute bottom-0 left-3 top-0 w-px bg-neutral-200 dark:bg-neutral-700 lg:left-1/2 lg:-translate-x-px" />
 
           {creator.journey.map((event, i) => {
             const onRight = i % 2 === 0;
@@ -92,34 +97,33 @@ function JourneyTimeline() {
               <FadeIn
                 key={event.id}
                 direction={onRight ? "right" : "left"}
-                delay={i * 0.08}
-                className="relative mb-12 last:mb-0"
+                delay={Math.min(i * 0.06, 0.3)}
+                className="relative mb-14 last:mb-0"
               >
-                <div className="relative pl-20 lg:grid lg:grid-cols-2 lg:items-start lg:gap-0 lg:pl-0">
-                  <div
-                    className={`lg:${onRight ? "order-1 pr-16 text-right" : "order-2 pl-16 text-left"}`}
-                  >
-                    <div className="mb-2 lg:mb-0">
-                      <span className="text-3xl font-bold text-amber-500">
+                <div className="lg:grid lg:grid-cols-2 lg:items-start">
+                  <div className={`pl-12 lg:pl-0 ${onRight ? CARD_LEFT : CARD_RIGHT}`}>
+                    <div className={`flex items-center gap-2 ${onRight ? "lg:justify-end" : "lg:justify-start"}`}>
+                      <span className="text-sm font-bold uppercase tracking-wider text-amber-600 dark:text-amber-500">
                         {event.year}
                       </span>
-                      <h3 className="mt-1 text-lg font-semibold text-black dark:text-white">
-                        {event.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-                        {event.description}
-                      </p>
                     </div>
+                    <h3 className="mt-1.5 text-lg font-semibold text-black dark:text-white">
+                      {event.title}
+                    </h3>
+                    <p className="mt-2 max-w-md text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+                      {event.description}
+                    </p>
                   </div>
 
                   <div
-                    className={`hidden lg:block ${onRight ? "order-2 pl-16" : "order-1 pr-16"}`}
+                    className={`hidden lg:block ${onRight ? CARD_LEFT_SPACER : CARD_RIGHT_SPACER}`}
                     aria-hidden="true"
                   />
                 </div>
 
-                <div className="absolute left-7 top-1 z-10 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border-2 border-amber-500 bg-white text-sm font-bold text-amber-600 dark:bg-neutral-950 lg:left-1/2">
-                  {event.year.slice(-2)}
+                <div className="absolute left-3 top-0.5 z-10 flex h-3 w-3 -translate-x-1/2 items-center justify-center lg:left-1/2">
+                  <span className="absolute inset-0 rounded-full bg-amber-500" />
+                  <span className="absolute -inset-1.5 rounded-full bg-amber-500/15" />
                 </div>
               </FadeIn>
             );

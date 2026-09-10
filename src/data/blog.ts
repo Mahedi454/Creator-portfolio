@@ -225,6 +225,56 @@ The principle I follow: AI should handle the mechanical parts of creation so I c
     tags: ["AI", "tools", "technology", "honest review", "creative process"],
     featured: false,
   },
+  {
+    id: "b-09",
+    slug: "before-and-after-editing-process",
+    title: "Before & After: My Editing Process",
+    excerpt: "People always ask how I make my videos look so polished. The honest answer is a surprisingly unglamorous, four-pass process. Here's the whole thing.",
+    content: `The most common comment on my videos isn't about the story. It's about the look. "How do your colors look like that?" "What do you do in post?" "That transition was wild." So let me walk you through exactly how a video goes from raw footage to what you see on screen, no secrets held back.
+ 
+My editing happens in four passes, and it almost never happens in one sitting. The first pass is pure assembly. I drag every usable clip into the timeline in story order, ignore color, ignore sound, ignore motion. I'm just building the skeleton of the story so I can watch it start to finish and see whether it actually holds together on a structure level.
+ 
+Pass two is the story pass. This is where I'm brutal. I cut everything that doesn't support the narrative, even if it's a beautiful shot. I reassemble the pacing — shorten this, let that breathe — until the story flows the way it does when I tell it out loud. Most edits die in this pass, and that's fine. Better to kill the video here than upload it.
+ 
+Pass three is the feel pass. Sound design first, always. Wild ambience, subtle room tone, music that earns its place. I add sound before picture because audio is where emotion actually lives. Then I layer in motion — speed ramps, punch-ins, the occasional transition. Everything here serves rhythm.
+ 
+The final pass is color. I start with a proper exposure and white balance correction, not a filter. Reveal the shadows, tame the highlights, then grade for mood. I keep a small library of looks I've built over the years and test each one in context before committing. When a shot is the hero of the edit, it gets individual attention; everything else gets a consistent base grade.
+ 
+The before and after difference isn't one big secret trick — it's these four passes done patiently, in order. Skip any of them and you'll see it in the result. Do all of them, and the video feels the way it does when you're actually there. That's the whole process, and it's available to anyone willing to sit with their cut a little longer.`,
+    category: "Behind The Scenes",
+    thumbnail: "https://images.unsplash.com/photo-1487537708572-3c850b5e856e?w=800&q=80",
+    author: "Alex Morgan",
+    date: "2024-05-15",
+    readingTime: "7 min read",
+    tags: ["editing", "post production", "color grading", "workflow", "behind the scenes"],
+    featured: false,
+  },
+  {
+    id: "b-10",
+    slug: "drone-shots-every-beginner-should-know",
+    title: "5 Drone Shots Every Beginner Should Know",
+    excerpt: "You don't need a thousand-dollar drone or years of practice to shoot footage that looks cinematic. Master these five moves first, and you'll have a reel that turns heads.",
+    content: `When I started flying drones, I made every mistake you can make. Jerky movements, boring angles, footage that looked like a lawnmower had been fumbled into the sky. It took me a while to realize the problem wasn't my gear. It was that I didn't have a vocabulary of shots to use.
+ 
+Shot number one is the apex, or the direct overhead. Fly straight up to a comfortable height, then keep the camera pointed straight down at your subject. Slowly rotate clockwise on the spot. This is the simplest shot in aerial photography and also one of the most effective — fields, roads, coastlines and people all look incredible from directly above. Go slow, keep it level, and let the geometry of the landscape do the work.
+ 
+Number two is the reveal. Pick a leading line — a road, a river, a row of trees — and fly along it, pitching the camera up from a low angle as you move. The effect is that the scene unfolds in front of the viewer. This is my go-to opening shot, because it establishes place and scale in a single smooth motion.
+ 
+Number three is the orbit. Keep your subject at the center of the frame and circle around it at a constant distance and height. The secret is consistency: identical stick pressure the whole way around, no pause at the start or end. Orbiting a landmark, a vehicle, or even a single person makes them feel like the center of the world.
+ 
+Number four is the follow. Track along side your subject — a car on a road, a hiker on a trail — matching speed and staying parallel. This read is simple but instantly cinematic. Keep the horizon level and let the background slide by to sell the motion.
+ 
+Number five is the rising hero shot: fly straight up while the camera starts low and levels toward the horizon. It turns a small scene into a grand one. I use it to end videos, pulling up and away over a landscape as the story closes.
+ 
+Before you practice any of it, learn the boring safety stuff: check your firmware, get your license if your country requires it, respect no-fly zones, and never fly over crowds or wildlife. The drone shots on your feed were all filmed legally and respectfully. So are the ones I'm teaching you today.`,
+    category: "Creator Tips",
+    thumbnail: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&q=80",
+    author: "Alex Morgan",
+    date: "2024-09-28",
+    readingTime: "6 min read",
+    tags: ["drones", "aerial", "filmmaking", "beginner", "cinematography"],
+    featured: false,
+  },
 ];
 
 export const blogCategories = ["Creator Tips", "Technology", "Travel", "Lifestyle", "Behind The Scenes", "Personal"] as const;
